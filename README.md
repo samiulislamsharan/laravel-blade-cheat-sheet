@@ -135,7 +135,7 @@ The `{{-- --}}` directive is used to add comments in Blade templates.
 {{-- This is a blade comment --}}
 ```
 
-## Other Directives
+## Authentication Directives
 
 ### @auth
 
@@ -157,6 +157,8 @@ The `@guest` directive checks if the user is a guest.
 @endguest
 ```
 
+## Authorization Directives
+
 ### @can
 
 The `@can` directive checks if the user has a certain permission.
@@ -176,6 +178,8 @@ The `@cannot` directive checks if the user does not have a certain permission.
     // code to execute if the user does not have the permission
 @endcannot
 ```
+
+## Environment Directives
 
 ### @env
 
