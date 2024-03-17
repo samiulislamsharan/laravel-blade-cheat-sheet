@@ -18,6 +18,18 @@ The `@if` directive is used for conditional statements.
 @endif
 ```
 
+### @empty
+
+The `@empty` directive checks if a variable is empty.
+
+```php
+@empty($variable)
+    // code to execute if the variable is empty
+@endempty
+```
+
+## Looping Structures
+
 ### @foreach
 
 The `@foreach` directive is used to iterate over arrays or objects.
@@ -38,6 +50,18 @@ The `@for` directive is used for simple loop iterations.
 @endfor
 ```
 
+### @forelse
+
+The `@forelse` directive is used to display a list of items with an optional message if the list is empty.
+
+```php
+@forelse($items as $item)
+    // code to execute for each item
+@empty
+    // code to execute if the list is empty
+@endforelse
+```
+
 ### @while
 
 The `@while` directive is used for indefinite loop iterations.
@@ -46,16 +70,6 @@ The `@while` directive is used for indefinite loop iterations.
 @while($condition)
     // code to execute while the condition is true
 @endwhile
-```
-
-### @empty
-
-The `@empty` directive checks if a variable is empty.
-
-```php
-@empty($variable)
-    // code to execute if the variable is empty
-@endempty
 ```
 
 ## Outputting Data
@@ -179,6 +193,16 @@ The `@cannot` directive checks if the user does not have a certain permission.
 @endcannot
 ```
 
+### @canany
+
+The `@canany` directive checks if the user has any of the given permissions.
+
+```php
+@canany(['permission1', 'permission2', ... , 'permissionN'])
+    // code to execute if the user has any of the given permissions
+@endcanany
+```
+
 ## Environment Directives
 
 ### @env
@@ -200,3 +224,5 @@ The `@production` directive checks if the application is in production environme
     // code to execute if the application is in production environment
 @endproduction
 ```
+
+These are the commonly used Blade directives in Laravel for templating and controlling the presentation logic of your views.
