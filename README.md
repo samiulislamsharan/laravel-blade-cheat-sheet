@@ -2,6 +2,55 @@
 
 Blade is a powerful templating engine provided with Laravel for working with PHP and HTML. It provides various directives to make your views more expressive and concise.
 
+## Extending Layouts
+
+### @extends
+
+The `@extends` directive is used to inherit a layout.
+
+```php
+@extends('layout.name')
+```
+
+### @section
+
+The `@section` directive defines a section that can be overwritten in child views.
+
+```php
+@section('sectionName')
+    // content of the section
+@endsection
+```
+
+### @yield
+
+The `@yield` directive is used to output the contents of a section.
+
+```php
+@yield('sectionName')
+```
+
+### @parent
+
+The `@parent` directive is used to display the content of the parent section.
+
+```php
+@section('sectionName')
+    @parent
+    // additional content
+@endsection
+```
+
+## Including Sub-Views
+
+### @include
+
+The `@include` directive is used to include a sub-view.
+
+```php
+@include('view.name')
+```
+
 ## Control Structures
 
 ### @if
@@ -74,7 +123,7 @@ The `@while` directive is used for indefinite loop iterations.
 
 ## Outputting Data
 
-### `{{}}`
+### The `{{}}` Directive
 
 The `{{ }}` directive is used to echo the contents of a variable.
 
@@ -82,7 +131,7 @@ The `{{ }}` directive is used to echo the contents of a variable.
 {{ $variable }}
 ```
 
-### `{{!! !!}}`
+### The `{{!! !!}}` Directive
 
 The `{!! !!}` directive outputs the contents without escaping HTML entities.
 
@@ -90,58 +139,7 @@ The `{!! !!}` directive outputs the contents without escaping HTML entities.
 {!! $htmlContent !!}
 ```
 
-## Including Sub-Views
-
-### @include
-
-The `@include` directive is used to include a sub-view.
-
-```php
-@include('view.name')
-```
-
-## Extending Layouts
-
-### @extends
-
-The `@extends` directive is used to inherit a layout.
-
-```php
-@extends('layout.name')
-```
-
-### @section
-
-The `@section` directive defines a section that can be overwritten in child views.
-
-```php
-@section('sectionName')
-    // content of the section
-@endsection
-```
-
-### @yield
-
-The `@yield` directive is used to output the contents of a section.
-
-```php
-@yield('sectionName')
-```
-
-### @parent
-
-The `@parent` directive is used to display the content of the parent section.
-
-```php
-@section('sectionName')
-    @parent
-    // additional content
-@endsection
-```
-
 ## Comments
-
-### `{{-- --}}`
 
 The `{{-- --}}` directive is used to add comments in Blade templates.
 
