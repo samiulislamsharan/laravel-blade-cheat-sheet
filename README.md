@@ -1,4 +1,4 @@
-# Laravel Blade Directives
+# Laravel Blade Cheat Sheet
 
 Blade is a powerful templating engine provided with Laravel for working with PHP and HTML. It provides various directives to make your views more expressive and concise.
 
