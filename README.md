@@ -2,6 +2,42 @@
 
 Blade is a powerful templating engine provided with Laravel for working with PHP and HTML. It provides various directives to make your views more expressive and concise.
 
+## Table of Contents
+
+- [Laravel Blade Cheat Sheet](#laravel-blade-cheat-sheet)
+  - [Table of Contents](#table-of-contents)
+  - [Extending Layouts](#extending-layouts)
+    - [@extends](#extends)
+    - [@section](#section)
+    - [@yield](#yield)
+    - [@parent](#parent)
+  - [Including Sub-Views](#including-sub-views)
+    - [@include](#include)
+  - [Control Structures](#control-structures)
+    - [@if](#if)
+    - [@empty](#empty)
+  - [Looping Structures](#looping-structures)
+    - [@foreach](#foreach)
+    - [@for](#for)
+    - [@forelse](#forelse)
+    - [@while](#while)
+  - [Outputting Data](#outputting-data)
+    - [The `{{}}` Directive](#the--directive)
+    - [The `{{!! !!}}` Directive](#the---directive)
+  - [Comments](#comments)
+  - [Authentication Directives](#authentication-directives)
+    - [@auth](#auth)
+    - [@guest](#guest)
+  - [Authorization Directives](#authorization-directives)
+    - [@can](#can)
+    - [@cannot](#cannot)
+    - [@canany](#canany)
+  - [Environment Directives](#environment-directives)
+    - [@env](#env)
+    - [@production](#production)
+
+<div class="page"/>
+
 ## Extending Layouts
 
 ### @extends
@@ -50,6 +86,7 @@ The `@include` directive is used to include a sub-view.
 ```php
 @include('view.name')
 ```
+<div class="page"/>
 
 ## Control Structures
 
@@ -146,6 +183,7 @@ The `{{-- --}}` directive is used to add comments in Blade templates.
 ```php
 {{-- This is a blade comment --}}
 ```
+<div class="page"/>
 
 ## Authentication Directives
 
@@ -190,6 +228,7 @@ The `@cannot` directive checks if the user does not have a certain permission.
     // code to execute if the user does not have the permission
 @endcannot
 ```
+<div class="page"/>
 
 ### @canany
 
@@ -199,6 +238,7 @@ The `@canany` directive checks if the user has any of the given permissions.
 @canany(['permission1', 'permission2', ... , 'permissionN'])
     // code to execute if the user has any of the given permissions
 @endcanany
+
 ```
 
 ## Environment Directives
